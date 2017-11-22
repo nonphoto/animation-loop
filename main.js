@@ -5,7 +5,7 @@ class AnimationLoop {
 
   /**
    * Create a new animation loop driver with the given callback.
-   * @param {function} callback - The function to call when an animation frame fires.
+   * @param {frameCallback} callback - The function to call on each animation frame.
    */
   constructor( callback ) {
     this.boundUpdate = ( t ) => { this.update( t ) }
@@ -50,5 +50,11 @@ class AnimationLoop {
     this.animationRequest = window.requestAnimationFrame( this.boundUpdate )
   }
 }
+
+/**
+ * @callback frameCallback
+ * @param {DOMHighResTimeStamp} t - The timestamp for the frame.
+ * @param {DOMHighResTimeStamp} dt - The time since the previous frame.
+ */
 
 module.exports = AnimationLoop
