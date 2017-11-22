@@ -1,0 +1,9 @@
+{
+  "name": "@nonphoto/animation-loop",
+  "version": "1.0.0",
+  "description": "A class for starting an animation loop.",
+  "author": "Jonas Luebbers",
+  "license": "Unlicense",
+  "main": "main.js",
+  "scripts": {}
+}
